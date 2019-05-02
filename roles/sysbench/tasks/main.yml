@@ -1,0 +1,14 @@
+---
+# This playbook will install sysbench if not installed, then run it
+- name: Install sysbench
+  yum:
+     name: sysbench
+     state: latest
+
+- name: Create sysbench run script
+  template:
+     src: sysbench.j2
+     dest: /home/thomasmosley/run_sysbench.sh
+
+- name: Run sysbench
+  command: /bin/bash /home/thomasmosley/run_sysbench.sh
