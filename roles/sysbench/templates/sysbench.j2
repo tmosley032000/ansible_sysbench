@@ -2,5 +2,5 @@
 rm sysbench_output.txt
 {% for thread in [2,4,6] %}
    echo $thread
-   /usr/bin/sysbench tests/demo.lua --threads={{thread}} --mysql-host=192.168.33.1 --mysql-user=tmosley --mysql-password=tmosley --db-driver=mysql --mysql-port=3306 run >> sysbench_output.txt
+   /usr/bin/sysbench tests/demo.lua --threads={{thread}} --mysql-host=<replace_host> --mysql-user=<replace_user> --mysql-password=<replace_password> --db-driver=mysql --mysql-port=3306 run >> sysbench_output.txt
 {% endfor %}
