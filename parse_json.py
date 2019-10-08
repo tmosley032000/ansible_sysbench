@@ -30,7 +30,7 @@ for line in f:
 j = j[:-1]
 j += "}"
 
-file1 = open("sysbench_json.txt","a")
+file1 = open("/tmp/sysbench_json.json","w")
 file1.write(j)
 file1.close()
 print j
