@@ -20,4 +20,9 @@
     dest: /home/thomasmosley/parse_json.py
 
 - name: Run json parser
-  command: python /home/thomasmosley/parse_json.py 
+  command: python /home/thomasmosley/parse_json.py > sysbench_output.txt
+
+- name: Copy out json file locally
+  fetch:
+    src: /tmp/sysbench_json.json
+    dest: /tmp/
