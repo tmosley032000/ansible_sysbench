@@ -1,3 +1,5 @@
+---
+
 - name: Connect to server, copy helper files, run sysbench
   hosts: app
   roles:

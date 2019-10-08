@@ -1,5 +1,6 @@
 ---
 # This playbook will install sysbench if not installed, then run it
+
 - name: Install sysbench
   yum:
      name: sysbench
@@ -12,3 +13,11 @@
 
 - name: Run sysbench
   command: /bin/bash /home/thomasmosley/run_sysbench.sh
+
+- name: Copy out json parser
+  copy:
+    src: /Users/thomasmosley/ansible_sysbench/parse_json.py
+    dest: /home/thomasmosley/parse_json.py
+
+- name: Run json parser
+  command: python /home/thomasmosley/parse_json.py > output.json
