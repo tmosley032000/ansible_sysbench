@@ -20,4 +20,4 @@
     dest: /home/thomasmosley/parse_json.py
 
 - name: Run json parser
-  command: python /home/thomasmosley/parse_json.py > output.json
+  command: python /home/thomasmosley/parse_json.py 
